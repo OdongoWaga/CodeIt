@@ -6,9 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 var mongoose = require('mongoose');
-
+var passport = require('passport');
 var config = require('./config');
+var session = require('express-session');
 
+require('./passport')
 mongoose.connect(config.dbConnstring);
 global.User= require('./models/user');
 
