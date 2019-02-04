@@ -8,6 +8,6 @@ module.exports ={
             pass: 'BruceBuffer26'
         }
     },
-    dbConnstring: 'mongodb://127.0.0.1:27017/codeshare',
-    sessionKey: 'Hithereyourang'
+    dbConnstring: 'mongodb://user:userpassword26@ds121415.mlab.com:21415/codeit',
+    sessionKey: 'codeit'
 }

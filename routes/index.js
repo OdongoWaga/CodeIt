@@ -7,11 +7,11 @@ var transporter = nodemailer.createTransport(config.mailer);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Code4Share - a platform for sharing code.' });
+  res.render('index', { title: 'CodeIt - a platform for sharing code.' });
 });
 
 router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'Code4Share - a platform for sharing code.'});
+  res.render('about', { title: 'CodeIt - a platform for sharing code.'});
 });
 
 router.route('/contact')
@@ -26,7 +26,7 @@ router.route('/contact')
 
     if(errors) {
       res.render('contact', {
-        title: 'Code4Share - a platform for sharing code.',
+        title: 'CodeIt - a platform for sharing code.',
         name: req.body.name,
         email: req.body.email,
         message: req.body.message,
@@ -34,8 +34,8 @@ router.route('/contact')
       });
     } else {
       var mailOptions = {
-        from: 'Code4Share <no-reply@code4share.com>',
-        to: 'demo.code4startup@gmail.com',
+        from: 'CodeIt <no-reply@codeit.com>',
+        to: 'wagaodongo@gmail.com',
         subject: 'You got a new message from visitor 💋 😽',
         text: req.body.message
       };

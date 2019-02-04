@@ -59,7 +59,7 @@
 
 <script src="/plugins/ot/ot.js"></script>
 <script src="/socket.io/socket.io.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js"></script>
+<script src="https://pure-island-46700.herokuapp.com/peer/peer.js"></script>
 
 <script>
   var EditorClient = ot.EditorClient;
@@ -120,7 +120,14 @@
   // Compatibility shim
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
     // PeerJS object
-    var peer = new Peer(username + roomId, {key: 't9tfmg8kq39s5rk9'});
+    var peer = new Peer(username + roomId, {
+       host: "pure-island-46700.herokuapp.com",
+      path: '/peerjs',
+      port: 443,
+      secure: true,
+      key: 'codeit',
+      debug: true
+    });
 
     peer.on('open', function(){
       $('#my-id').text(peer.id);
