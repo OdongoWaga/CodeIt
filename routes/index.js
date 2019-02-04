@@ -35,7 +35,7 @@ router.route('/contact')
     } else {
       var mailOptions = {
         from: 'Code4Share <no-reply@code4share.com>',
-        to: 'wagaodongo@gmail.com',
+        to: 'demo.code4startup@gmail.com',
         subject: 'You got a new message from visitor 💋 😽',
         text: req.body.message
       };
@@ -49,7 +49,5 @@ router.route('/contact')
 
     }
   });
-
-
 
 module.exports = router;
